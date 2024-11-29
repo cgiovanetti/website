@@ -18,14 +18,14 @@
 			.custom-image-wrapper {
 				display: inline-block;
 				padding: 80px;
-				/* background-color: #f0f0f0; */
-				/* border: 1px solid #ccc; */
-				/* border-radius: 8px; */
+				box-sizing: border-box; /* Ensures padding is included in the dimensions */
+				vertical-align: top; /* Aligns inline-block elements correctly */
 			}
 		
 			.custom-image-wrapper img {
 				width: 200px;
 				height: auto;
+				display: block;
 			}
 		</style>
 	</head>
@@ -66,71 +66,134 @@
 										</ul>-->
 									</div>
 									
-									
-									<span class="image object custom-image-wrapper">
-										<img src="images/headshot.jpg" alt="Headshot" />
+					
+									<span class="image object custom-image-wrapper desktop-only">
+										<img src="images/headshot.jpg" alt="Headshot">
 									</span>
-									
-									<!-- </span> -->
+									<span class="mobile-only">
+										<span class="image object-fit">
+											<img src="images/headshot.jpg" alt="Headshot">
+										</span>
+									</span>
 								</section>
 
 							<!-- Section -->
-								<section>
-									<header class="major">
-										<h2>My Work</h2>
-									</header>
-									<div class="features">
-										<div style="padding-left: 4em;">
-											<article>
-												<a href="research.html" style="text-decoration: none; border-bottom: none; color: inherit;">
-												<span class="icon solid fa-terminal"></span>
-												</a>
-													<div class="content">
-														<h3>Physics</h3>
-														<p>I study dark matter and early universe cosmology.  Check out this page for more about my research interests.</p>
+								<div class="desktop-only">
+									<section>
+										<header class="major">
+											<h2>My Work</h2>
+										</header>
+										<div class="features">
+											<div style="padding-left: 14em;">
+												<article>
+													<a href="research.html" style="text-decoration: none; border-bottom: none; color: inherit;">
+													<span class="icon solid fa-terminal"></span>
+													</a>
+														<div class="content">
+															<h3>Physics</h3>
+															<p>I study dark matter and early universe cosmology.  Check out this page for more about my research interests.</p>
+														</div>
+												</article>
+											</div>
+											<div style="padding-left: 14em; padding-top: 2em;" >
+												<article>
+													<a href="writing.html" style="text-decoration: none; border-bottom: none; color: inherit;">
+													<span class="icon solid fa-pencil-alt"></span>
+													<!-- <i class="icon solid fa-pencil"></i> -->
+													</a>
+													<div class="content" style="max-width: 6000px;">
+														<h3>Writing</h3>
+														<p>I've written essays, journalistic pieces, opinion pieces, and educational pieces.  Find them all in one place here.</p>
 													</div>
-											</article>
-										</div>
-										<div style="padding-left: 4em; padding-top: 2em;" >
-											<article>
-												<a href="writing.html" style="text-decoration: none; border-bottom: none; color: inherit;">
-												<span class="icon solid fa-pencil-alt"></span>
-												<!-- <i class="icon solid fa-pencil"></i> -->
-												</a>
-												<div class="content" style="max-width: 6000px;">
-													<h3>Writing</h3>
-													<p>I've written essays, journalistic pieces, opinion pieces, and educational pieces.  Find them all in one place here.</p>
-												</div>
-											</article>
-										</div>
-										<div style="padding-left: 4em; padding-top: 2em;">
-											<article>
-												<a href="communityengagement.html" style="text-decoration: none; border-bottom: none; color: inherit;">
-													<span class="icon solid fa-rocket"></span>
-												</a>
+												</article>
+											</div>
+											<div style="padding-left: 14em; padding-top: 2em;">
+												<article>
+													<a href="communityengagement.html" style="text-decoration: none; border-bottom: none; color: inherit;">
+														<span class="icon solid fa-rocket"></span>
+													</a>
+													<div class="content">
+														<h3>Community Engagement</h3>
+														<p>Here's an index of my community engagement work, including public talks and podcast appearances.</p>
+													</div>
+												</article>
+											</div>
+											
+											<!-- <article>
+												<span class="icon solid fa-signal"></span>
 												<div class="content">
-													<h3>Community Engagement</h3>
-													<p>Here's an index of my community engagement work, including public talks and podcast appearances.</p>
+													<h3>Sed magna finibus</h3>
+													<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
 												</div>
-											</article>
+											</article> -->
+											<!-- <article>
+												<span class="icon solid fa-signal"></span>
+												<div class="content">
+													<h3>Sed magna finibus</h3>
+													<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+												</div>
+											</article> -->
 										</div>
-										
-										<!-- <article>
-											<span class="icon solid fa-signal"></span>
-											<div class="content">
-												<h3>Sed magna finibus</h3>
-												<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+									</section>
+								</div>
+								<div class="mobile-only">
+									<section>
+										<header class="major">
+											<h2>My Work</h2>
+										</header>
+										<div class="features">
+											<div>
+												<article>
+													<a href="research.html" style="text-decoration: none; border-bottom: none; color: inherit;">
+													<span class="icon solid fa-terminal"></span>
+													</a>
+														<div class="content">
+															<h3>Physics</h3>
+															<p>I study dark matter and early universe cosmology.  Check out this page for more about my research interests.</p>
+														</div>
+												</article>
 											</div>
-										</article> -->
-										<!-- <article>
-											<span class="icon solid fa-signal"></span>
-											<div class="content">
-												<h3>Sed magna finibus</h3>
-												<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+											<div style="padding-top: 2em;" >
+												<article>
+													<a href="writing.html" style="text-decoration: none; border-bottom: none; color: inherit;">
+													<span class="icon solid fa-pencil-alt"></span>
+													<!-- <i class="icon solid fa-pencil"></i> -->
+													</a>
+													<div class="content" style="max-width: 6000px;">
+														<h3>Writing</h3>
+														<p>I've written essays, journalistic pieces, opinion pieces, and educational pieces.  Find them all in one place here.</p>
+													</div>
+												</article>
 											</div>
-										</article> -->
-									</div>
-								</section>
+											<div style="padding-top: 2em;">
+												<article>
+													<a href="communityengagement.html" style="text-decoration: none; border-bottom: none; color: inherit;">
+														<span class="icon solid fa-rocket"></span>
+													</a>
+													<div class="content">
+														<h3>Community Engagement</h3>
+														<p>Here's an index of my community engagement work, including public talks and podcast appearances.</p>
+													</div>
+												</article>
+											</div>
+											
+											<!-- <article>
+												<span class="icon solid fa-signal"></span>
+												<div class="content">
+													<h3>Sed magna finibus</h3>
+													<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+												</div>
+											</article> -->
+											<!-- <article>
+												<span class="icon solid fa-signal"></span>
+												<div class="content">
+													<h3>Sed magna finibus</h3>
+													<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+												</div>
+											</article> -->
+										</div>
+									</section>
+								</div>
 
 							<!-- Section -->
 								<!-- <section>
