@@ -15,36 +15,47 @@
 				margin: 0;
 				text-align: center;
 				width: 200px; /* Fixed width for consistency */
+				height: 300px; /* Set a consistent height for all figures */
 				display: flex;
-				flex-direction: column; /* Stack the image and caption vertically */
+				flex-direction: column; /* Stack image and caption vertically */
 				align-items: center;
-				justify-content: flex-start;
-				overflow: hidden; /* Ensure no image spillover */
+				justify-content: flex-start; /* Start content at the top */
+				box-sizing: border-box; /* Ensure padding doesn’t affect dimensions */
+				padding: 15px 0; /* Add padding inside the figure */
+				overflow: hidden; /* Prevent overflow */
+				position: relative; /* Ensures the caption stays positioned properly */
 			}
 
 			.image-wrapper {
 				width: 100%;
-				height: auto; /* Allow the wrapper height to adjust based on content */
+				height: 250px; /* Fixed height for the image wrapper */
 				display: flex;
 				justify-content: center;
 				align-items: center;
 				background-color: #f0f0f0; /* Optional background for padding effect */
+				overflow: hidden; /* Prevent oversized images from spilling out */
 			}
 
 			.image-wrapper img {
-				width: 100%; /* Scale image to the width of the wrapper */
-				height: auto; /* Maintain the aspect ratio */
-				max-height: 200px; /* Limit the image's height to prevent it from overflowing */
+				max-width: 100%; /* Scale image to fit the wrapper */
+				max-height: 100%; /* Scale image to fit the wrapper */
 				object-fit: contain; /* Ensure the image fits nicely within the wrapper */
 			}
 
 			figcaption {
-				margin-top: 10px;
+				margin-top: auto; /* Push the caption to the bottom of the figure */
 				font-size: 0.9em;
 				color: #555;
 				text-align: center;
 				display: block;
+				word-wrap: break-word; /* Ensure long text doesn’t overflow */
+				max-width: 100%; /* Prevent text from exceeding the container width */
+				white-space: normal; /* Ensure text wraps properly */
+				padding-top: 0px; /* Optional: Add spacing above the caption */
 			}
+
+
+
 			
 			.force-lowercase {
 				text-transform: lowercase;
